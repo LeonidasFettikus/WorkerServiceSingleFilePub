@@ -77,11 +77,11 @@ namespace ConfigurationTest
             {
                 if (Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT") == Environments.Development)
                 {
-                    config.AddJsonFile("service.Development.json");
+                    config.AddJsonFile("appsettings.Development.json");
                 }
                 else
                 {
-                    config.AddJsonFile("service.json");
+                    config.AddJsonFile("appsettings.json");
                 }
             });
 
