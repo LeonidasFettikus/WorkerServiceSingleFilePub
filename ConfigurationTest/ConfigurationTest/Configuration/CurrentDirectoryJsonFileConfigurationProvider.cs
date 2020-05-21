@@ -1,15 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using System.Text.Json;
 
-namespace ConfigurationTest
+namespace ConfigurationTest.Configuration
 {
-    public class JsonFileConfigurationProvider : ConfigurationProvider
+    public class CurrentDirectoryJsonFileConfigurationProvider : ConfigurationProvider
     {         
         public override void Load()
         {
