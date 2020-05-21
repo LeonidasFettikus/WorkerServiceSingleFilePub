@@ -75,14 +75,7 @@ namespace ConfigurationTest
         {            
             builder.ConfigureAppConfiguration(config =>
             {
-                if (Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT") == Environments.Development)
-                {
-                    config.AddJsonFile("appsettings.Development.json");
-                }
-                else
-                {
-                    config.AddJsonFile("appsettings.json");
-                }
+                config.Add(new JsonFileConfigurationSource());
             });
 
             return builder;
